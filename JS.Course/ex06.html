@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+    <style>
+
+        body h1 {
+            font-size: 22px;
+        }
+        body {
+            background-color: rgba(127, 255, 212, 0.411);
+            font-size: 18px;
+        }
+
+        input {
+            width: 150px;
+            height: 30px;
+            margin-bottom: 10px;
+            margin-top: 18px;
+        }
+
+        @media screen and (max-width: 535px) {
+            input {
+                width: 100px;
+            }
+
+            body {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            input {
+                width: 70px;
+            }
+            }
+
+        div#res {
+            margin-top: 0px;
+            font-size: 12pt;
+            margin-bottom: 30px;
+        }
+
+        section {
+            max-width: 1000px;
+            height: 500px;
+            margin: auto;
+            background-color: rgb(208, 203, 203);
+            border-radius: 10px;
+        }
+
+        div.margin {
+            text-align: center;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="margin">
+    <h1>Calculator</h1>
+<div class="div01">
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Sum" onclick="somar()">
+    <div id="res1">Result</div>
+    
+    <input type="number" name="bxbn1" id="bxbn1"> -
+    <input type="number" name="bxbn2" id="bxbn2">
+    <input type="button" value="Subtract" onclick="subtrair()">
+    <div id="res2">Result</div>
+ 
+    <input type="number" name="cxcn1" id="cxcn1"> *
+    <input type="number" name="cxcn2" id="cxcn2">
+    <input type="button" value="Multiply" onclick= "multiplicar()">
+    <div id="res3">Result</div>
+  
+    <input type="number" name="dxdn1" id="dxdn1"> /
+    <input type="number" name="dxdn2" id="dxdn2">
+    <input type="button" value="Divide" onclick="dividir()">
+    <div id="res4">Result</div>
+</div>
+</section>
+    
+    <script>
+
+        window.alert('Hello, how are you? Welcome!');
+
+        function somar() {
+        var tn1 = window.document.querySelector('input#txtn1');
+        var tn2 = window.document.querySelector('input#txtn2');
+        var res1 = window.document.querySelector('div#res1');
+        var n1 = Number(tn1.value);
+        var n2 = Number(tn2.value);
+        var s = n1 + n2;
+        res1.innerHTML = 'The result of the sum of ' + n1 + ' and ' + n2 + ' equals <strong>' + s + '</strong>'
+        }
+
+        function subtrair() {
+            var bn1 = window.document.getElementById('bxbn1');
+            var bn2 = window.document.getElementById('bxbn2');
+            var res2 = window.document.querySelector('div#res2');
+            var b1 = Number(bn1.value);
+            var b2 = Number(bn2.value);
+            var s2 = b1 - b2;
+            res2.innerHTML = 'The result of subtracting ' + b1 + ' and ' + b2 + ' equals <strong>' + s2 + '</strong>'
+        }
+
+        function multiplicar() {
+            var cn1 = window.document.getElementById('cxcn1');
+            var cn2 = window.document.getElementById('cxcn2');
+            var res3 = window.document.getElementById('res3');
+            var c1 = Number(cn1.value);
+            var c2 = Number(cn2.value);
+            var s3 = c1 * c2;
+            res3.innerHTML = 'The result of multiplying between ' + c1 + ' and ' + c2 + ' is <strong>' + s3 + '</strong>'
+        }
+
+        function dividir() {
+            var dn1 = window.document.getElementById('dxdn1');
+            var dn2 = window.document.querySelector('input#dxdn2');
+            var res4 = window.document.querySelector('div#res4');
+            var d1 = Number(dn1.value);
+            var d2 = Number(dn2.value);
+            var s4 = d1 / d2;
+            res4.innerHTML = 'The result of dividing between ' + d1 + ' and ' + d2 + ' is <strong>' + s4 + '</strong>'
+        }
+
+
+    </script>
+
+
+</body>
+</html>
